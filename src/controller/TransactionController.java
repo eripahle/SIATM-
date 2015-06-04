@@ -17,10 +17,96 @@
 
 package controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import view.ATMMachine;
+
 /**
  *
  * @author Aprilio Pajri
  */
 public class TransactionController {
+    ATMMachine atms;
+
+    public TransactionController(ATMMachine atms) {
+        this.atms = atms;
+        showTransactionScreen();
+    }
+    
+    /**
+     * set visibility true for transaction screen and false for others
+     */
+    private void showTransactionScreen(){
+        //TODO show transaction screen
+    }
+    
+    /**
+     * add action to all button used in transaction session
+     */
+    private void addButtonsSetting(){
+        
+       /*
+        Set up button left
+        */ 
+       atms.getBtnL1().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button left 1
+           }
+       });
+       
+       atms.getBtnL2().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button left 2
+           }
+       });
+       
+       atms.getBtnL3().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button left 3
+           }
+       });
+       
+       atms.getBtnL4().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button left 4
+           }
+       });
+       
+       
+       /*
+        Set up button right
+        */ 
+       atms.getBtnR1().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button right 1
+           }
+       });
+       
+       atms.getBtnR2().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button right 2
+           }
+       });
+       
+       atms.getBtnR3().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button right 3
+           }
+       });
+       
+       atms.getBtnR4().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button right 4
+           }
+       });
+    }
     
 }

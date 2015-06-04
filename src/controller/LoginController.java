@@ -17,10 +17,126 @@
 
 package controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import view.ATMMachine;
+import view.LoginScreen;
+
 /**
  *
  * @author Aprilio Pajri
  */
 public class LoginController {
+    
+    LoginScreen loginScreen;
+    ATMMachine atms;
+    
+    public LoginController(ATMMachine atms) {
+        this.atms = atms;
+        showLoginScreen();
+    }
+    
+    private void showLoginScreen(){
+        //TODO showLoginScreen
+    }
+    
+    private void buttonsActionSetting(){
+        atms.getBtn0().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 0
+            }
+        });
+        
+        atms.getBtn1().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 1
+            }
+        } );
+        
+        atms.getBtn2().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 2
+            }
+        } );
+        
+        atms.getBtn3().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 3
+            }
+        });
+        
+        atms.getBtn4().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 4
+            }
+        });
+        
+        atms.getBtn5().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 5
+            }
+        });
+        
+        atms.getBtn6().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 6
+            }
+        });
+        
+        atms.getBtn7().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 6
+            }
+        });
+        
+        atms.getBtn8().addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 8
+            }
+        });
+        
+        atms.getBtn9().addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button 9
+            }
+        });
+        
+        atms.getBtnClear().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for button clear
+            }
+        });
+        
+        atms.getBtnCancel().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO actionf or button clear
+            }
+        });
+     
+    }
     
 }

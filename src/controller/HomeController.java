@@ -17,10 +17,61 @@
 
 package controller;
 
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.net.URLConnection;
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JPanel;
+import view.ATMMachine;
+import view.HomeScreen;
+
 /**
  *
  * @author Aprilio Pajri
  */
 public class HomeController {
+    ATMMachine atms;
+    //HomeScreen homeScreen;
     
+    JPanel homeScreen;
+        
+    /**
+     * 
+     * @param atms  : ATMMachine
+     */
+    public HomeController(ATMMachine atms) {
+        this.atms = atms;
+        showHomeScreen();
+        buttonsActionSetting();
+    }
+    
+    private void showHomeScreen(){
+       
+    }
+    
+    private void buttonsActionSetting(){
+        atms.getBtnRight3().addActionListener( new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for pilihan bahasa 1
+            }
+        });
+        
+        atms.getBtnRight4().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO action for pilihan bahasa 2
+            }
+        });
+        
+        
+    }
 }

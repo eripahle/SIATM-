@@ -17,10 +17,46 @@
 
 package controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import view.ATMMachine;
+
 /**
  *
  * @author Aprilio Pajri
  */
 public class WithdrawalController {
     
+    ATMMachine atms;
+    public WithdrawalController(ATMMachine atms) {
+        this.atms = atms;
+        showWithdrawalScreen();
+        addButtonsSetting();
+    }
+    
+    /**
+     * set visibility true to withdrawal screen and false to others
+     */
+    private void showWithdrawalScreen(){
+        //TODO show withdrawal screeh
+    }
+    
+    /**
+     * add action to all button used in withdrawal session 
+     */
+    private void addButtonsSetting(){
+        atms.getBtnR3().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button right 3
+           }
+       });
+       
+       atms.getBtnR4().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //TODO action for button right 4
+           }
+       });
+    }
 }

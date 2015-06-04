@@ -11,5 +11,23 @@ package entity;
  * @author Aprilio Pajri
  */
 public class Customer {
+    private int pin;
+    private String idCustomer;
+
+    public int getPin() {
+        return pin;
+    }
+
+    public void setPin(int pin) {
+        this.pin = pin;
+    }
+
+    public String getIdCustomer() {
+        return idCustomer;
+    }
+
+    public void setIdCustomer(String idCustomer) {
+        this.idCustomer = idCustomer;
+    }
     
 }

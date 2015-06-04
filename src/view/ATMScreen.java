@@ -17,6 +17,8 @@
 package view;
 
 import java.awt.CardLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 /**
  *
@@ -31,8 +33,8 @@ public class ATMScreen extends javax.swing.JFrame {
     private static boolean logedIn = false;
     private final HomePanel homePanel = new HomePanel(this);
     private final LoginPanel loginPanel = new LoginPanel(this);
-    private final TransactionPanel transactionPanel = new TransactionPanel();
-    private final WithdrawalPanel withdrawalPanel = new WithdrawalPanel();
+    private final TransactionPanel transactionPanel = new TransactionPanel(this);
+    private final WithdrawalPanel withdrawalPanel = new WithdrawalPanel(this);
 
     public ATMScreen() {
         initComponents();
@@ -83,7 +85,7 @@ public class ATMScreen extends javax.swing.JFrame {
         btn8 = new javax.swing.JButton();
         btn9 = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        btnCorrection = new javax.swing.JButton();
+        btnClear = new javax.swing.JButton();
         btnEnter = new javax.swing.JButton();
         btn0 = new javax.swing.JButton();
         cardPanel = new javax.swing.JPanel();
@@ -132,11 +134,11 @@ public class ATMScreen extends javax.swing.JFrame {
             }
         });
 
-        btnCorrection.setBackground(new java.awt.Color(255, 255, 0));
-        btnCorrection.setText("Correction");
-        btnCorrection.addActionListener(new java.awt.event.ActionListener() {
+        btnClear.setBackground(new java.awt.Color(255, 255, 0));
+        btnClear.setText("Correction");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCorrectionActionPerformed(evt);
+                btnClearActionPerformed(evt);
             }
         });
 
@@ -190,7 +192,7 @@ public class ATMScreen extends javax.swing.JFrame {
                             .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnCorrection, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnClear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -250,7 +252,7 @@ public class ATMScreen extends javax.swing.JFrame {
                     .addComponent(btn6)
                     .addComponent(btn5)
                     .addComponent(btn4)
-                    .addComponent(btnCorrection))
+                    .addComponent(btnClear))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn9)
@@ -270,10 +272,194 @@ public class ATMScreen extends javax.swing.JFrame {
         cardLayout.show(cardPanel, "2");
     }//GEN-LAST:event_btnCancelActionPerformed
 
-    private void btnCorrectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCorrectionActionPerformed
+    public static boolean isLogedIn() {
+        return logedIn;
+    }
+
+    public static void setLogedIn(boolean logedIn) {
+        ATMScreen.logedIn = logedIn;
+    }
+
+    public JButton getBtn0() {
+        return btn0;
+    }
+
+    public void setBtn0(JButton btn0) {
+        this.btn0 = btn0;
+    }
+
+    public JButton getBtn1() {
+        return btn1;
+    }
+
+    public void setBtn1(JButton btn1) {
+        this.btn1 = btn1;
+    }
+
+    public JButton getBtn2() {
+        return btn2;
+    }
+
+    public void setBtn2(JButton btn2) {
+        this.btn2 = btn2;
+    }
+
+    public JButton getBtn3() {
+        return btn3;
+    }
+
+    public void setBtn3(JButton btn3) {
+        this.btn3 = btn3;
+    }
+
+    public JButton getBtn4() {
+        return btn4;
+    }
+
+    public void setBtn4(JButton btn4) {
+        this.btn4 = btn4;
+    }
+
+    public JButton getBtn5() {
+        return btn5;
+    }
+
+    public void setBtn5(JButton btn5) {
+        this.btn5 = btn5;
+    }
+
+    public JButton getBtn6() {
+        return btn6;
+    }
+
+    public void setBtn6(JButton btn6) {
+        this.btn6 = btn6;
+    }
+
+    public JButton getBtn7() {
+        return btn7;
+    }
+
+    public void setBtn7(JButton btn7) {
+        this.btn7 = btn7;
+    }
+
+    public JButton getBtn8() {
+        return btn8;
+    }
+
+    public void setBtn8(JButton btn8) {
+        this.btn8 = btn8;
+    }
+
+    public JButton getBtn9() {
+        return btn9;
+    }
+
+    public void setBtn9(JButton btn9) {
+        this.btn9 = btn9;
+    }
+
+    public JButton getBtnCancel() {
+        return btnCancel;
+    }
+
+    public void setBtnCancel(JButton btnCancel) {
+        this.btnCancel = btnCancel;
+    }
+
+    public JButton getBtnClear() {
+        return btnClear;
+    }
+
+    public void setBtnClear(JButton btnClear) {
+        this.btnClear = btnClear;
+    }
+
+    public JButton getBtnEnter() {
+        return btnEnter;
+    }
+
+    public void setBtnEnter(JButton btnEnter) {
+        this.btnEnter = btnEnter;
+    }
+
+    public JButton getBtnL1() {
+        return btnL1;
+    }
+
+    public void setBtnL1(JButton btnL1) {
+        this.btnL1 = btnL1;
+    }
+
+    public JButton getBtnL2() {
+        return btnL2;
+    }
+
+    public void setBtnL2(JButton btnL2) {
+        this.btnL2 = btnL2;
+    }
+
+    public JButton getBtnL3() {
+        return btnL3;
+    }
+
+    public void setBtnL3(JButton btnL3) {
+        this.btnL3 = btnL3;
+    }
+
+    public JButton getBtnL4() {
+        return btnL4;
+    }
+
+    public void setBtnL4(JButton btnL4) {
+        this.btnL4 = btnL4;
+    }
+
+    public JButton getBtnR1() {
+        return btnR1;
+    }
+
+    public void setBtnR1(JButton btnR1) {
+        this.btnR1 = btnR1;
+    }
+
+    public JButton getBtnR2() {
+        return btnR2;
+    }
+
+    public void setBtnR2(JButton btnR2) {
+        this.btnR2 = btnR2;
+    }
+
+    public JButton getBtnR3() {
+        return btnR3;
+    }
+
+    public void setBtnR3(JButton btnR3) {
+        this.btnR3 = btnR3;
+    }
+
+    public JButton getBtnR4() {
+        return btnR4;
+    }
+
+    public void setBtnR4(JButton btnR4) {
+        this.btnR4 = btnR4;
+    }
+
+    public JPanel getCardPanel() {
+        return cardPanel;
+    }
+
+    public void setCardPanel(JPanel cardPanel) {
+        this.cardPanel = cardPanel;
+    }
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
         cardLayout.show(cardPanel, "1");
-    }//GEN-LAST:event_btnCorrectionActionPerformed
+    }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
         // TODO add your handling code here:
@@ -296,7 +482,7 @@ public class ATMScreen extends javax.swing.JFrame {
     private javax.swing.JButton btn8;
     private javax.swing.JButton btn9;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnCorrection;
+    private javax.swing.JButton btnClear;
     private javax.swing.JButton btnEnter;
     private javax.swing.JButton btnL1;
     private javax.swing.JButton btnL2;

@@ -19,8 +19,8 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import view.ATMMachine;
-import view.LoginScreen;
+import view.ATMScreen;
+import view.LoginPanel;
 
 /**
  *
@@ -28,16 +28,16 @@ import view.LoginScreen;
  */
 public class LoginController {
     
-    LoginScreen loginScreen;
-    ATMMachine atms;
+    LoginPanel loginScreen;
+    ATMScreen atms;
     
-    public LoginController(ATMMachine atms) {
+    public LoginController(ATMScreen atms) {
         this.atms = atms;
-        showLoginScreen();
+        showLoginPanel();
     }
     
-    private void showLoginScreen(){
-        //TODO showLoginScreen
+    private void showLoginPanel(){
+        //TODO showLoginPanel
     }
     
     private void buttonsActionSetting(){

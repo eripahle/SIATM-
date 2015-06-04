@@ -19,16 +19,16 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import view.ATMMachine;
+import view.ATMScreen;
 
 /**
  *
  * @author Aprilio Pajri
  */
 public class TransactionController {
-    ATMMachine atms;
+    ATMScreen atms;
 
-    public TransactionController(ATMMachine atms) {
+    public TransactionController(ATMScreen atms) {
         this.atms = atms;
         showTransactionScreen();
     }

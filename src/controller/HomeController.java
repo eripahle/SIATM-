@@ -28,24 +28,24 @@ import java.net.URLConnection;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
-import view.ATMMachine;
-import view.HomeScreen;
+import view.ATMScreen;
+import view.HomePanel;
 
 /**
  *
  * @author Aprilio Pajri
  */
 public class HomeController {
-    ATMMachine atms;
+    ATMScreen atms;
     //HomeScreen homeScreen;
     
     JPanel homeScreen;
         
     /**
      * 
-     * @param atms  : ATMMachine
+     * @param atms  : ATMScreen
      */
-    public HomeController(ATMMachine atms) {
+    public HomeController(ATMScreen atms) {
         this.atms = atms;
         showHomeScreen();
         buttonsActionSetting();
@@ -56,7 +56,7 @@ public class HomeController {
     }
     
     private void buttonsActionSetting(){
-        atms.getBtnRight3().addActionListener( new ActionListener() {
+        atms.getBtnR3().addActionListener( new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -64,7 +64,7 @@ public class HomeController {
             }
         });
         
-        atms.getBtnRight4().addActionListener(new ActionListener() {
+        atms.getBtnR4().addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {

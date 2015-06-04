@@ -19,7 +19,7 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import view.ATMMachine;
+import view.ATMScreen;
 
 /**
  *
@@ -27,8 +27,8 @@ import view.ATMMachine;
  */
 public class WithdrawalController {
     
-    ATMMachine atms;
-    public WithdrawalController(ATMMachine atms) {
+    ATMScreen atms;
+    public WithdrawalController(ATMScreen atms) {
         this.atms = atms;
         showWithdrawalScreen();
         addButtonsSetting();

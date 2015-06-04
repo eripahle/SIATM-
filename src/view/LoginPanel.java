@@ -30,6 +30,10 @@ public class LoginPanel extends javax.swing.JPanel {
         initComponents();
     }
 
+    public LoginPanel(ATMScreen aThis) {
+        initComponents();
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

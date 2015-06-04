@@ -30,7 +30,7 @@ public class TransactionPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-    TransactionPanel(ATMScreen aThis) {
+    public TransactionPanel(ATMScreen aThis) {
         initComponents();
     }
 
